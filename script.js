@@ -11,6 +11,11 @@ function getQuote() {
 function createTweet(input) {
     var data = input[0];
 
+    if (!data.content) {
+        $('.quote').text('Unknown');
+        return
+    }
+
     var quoteText = $(data.content).text().trim();
     var quoteAuthor = data.title;
 
