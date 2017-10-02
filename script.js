@@ -11,7 +11,7 @@ function getQuote() {
 function createTweet(input) {
     var data = input[0];
 
-    if (!data.content) {
+    if (!data) {
         $('.quote').text('Unknown');
         return
     }
